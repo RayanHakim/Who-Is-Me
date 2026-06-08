@@ -1,0 +1,206 @@
+:root {
+    --bg-color: #fcfbfa;
+    --card-bg: #ffffff;
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    --primary: #ff6b35;
+    --primary-hover: #e0531f;
+    --secondary: #edf2f7;
+    --secondary-text: #4a5568;
+    --danger: #e53e3e;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 20px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.brand-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+    margin-bottom: 5px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.05);
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 15px;
+}
+
+.instruction-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.text-center { text-align: center; }
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+input[type="text"], input[type="number"] {
+    background-color: #ffffff;
+    border: 2px solid var(--border-color);
+    color: var(--text-main);
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.2s;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.btn {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-block { width: 100%; }
+.btn-primary { background-color: var(--primary); color: white; }
+.btn-primary:active { background-color: var(--primary-hover); }
+.btn-secondary { background-color: var(--secondary); color: var(--secondary-text); margin-top: 5px;}
+.btn-danger { background-color: #fff5f5; color: var(--danger); border: 1px solid #fed7d7; }
+
+.word-box {
+    background: #fffaf0;
+    border: 2px dashed var(--primary);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.word-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.word-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.player-card {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    transition: all 0.2s;
+}
+
+.card-player-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    word-break: break-all;
+}
+
+.btn-eliminate {
+    background: #fff5f5;
+    color: var(--danger);
+    border: 1px solid #fed7d7;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+}
+
+.player-card.eliminated {
+    background: #f7fafc;
+    border-color: var(--border-color);
+}
+.player-card.eliminated .card-player-name {
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+.role-reveal {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 4px;
+}
+.word-reveal {
+    font-size: 11px;
+    color: var(--text-muted);
+}
